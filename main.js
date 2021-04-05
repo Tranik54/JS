@@ -1,9 +1,9 @@
-var money = 3000;
-var income = 120;
-var addExpenses = 5;
-var deposit = 60500;
-var mission = 12;
-var period = 6;
+let money = 3000;
+let income = 120;
+let addExpenses = 5;
+let deposit = 60500;
+let mission = 12;
+let period = 6;
 
 console.log(money);
 
