@@ -1,10 +1,15 @@
-let money = 3000;
-let income = 120;
-let addExpenses = 5;
-let deposit = 60500;
-let mission = 12;
-let period = 6;
+let money = 54000;
+let income = 12000;
+let addExpenses = 'Аренда, Бензин, Еда, Связь';
+let deposit = false;
+let mission = 800000;
+let period = 12;
 
-console.log(money);
+console.log(typeof money, typeof income, typeof deposit);
+console.log(addExpenses);
+console.log(period, mission);
+console.log(addExpenses.toLowerCase());
+console.log(addExpenses.split(', '));
 
-alert('Нажми на кнопку');
+let budgetDay = money / 30;
+console.log(budgetDay);
