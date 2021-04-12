@@ -1,15 +1,44 @@
-let money = 54000;
-let income = 12000;
-let addExpenses = "Аренда, Бензин, Еда, Связь";
-let deposit = false;
-let mission = 800000;
-let period = 12;
+'use strict';
 
-console.log(typeof money, typeof income, typeof deposit);
-console.log(addExpenses);
-console.log(period, mission);
-console.log(addExpenses.toLowerCase());
-console.log(addExpenses.split(", "));
+// Проверка на число
+let isNumber = function(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+};
 
-let budgetDay = money / 30;
-console.log(budgetDay);
+// Генерация случайного числа
+let getRandomInt = function(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
+function main() {
+  let number = getRandomInt(100);
+  function round() {
+      let num = prompt("Угадай число от 1 до 100");
+      if (num === null) {
+          alert("До свидания!");
+          return;
+      }
+      if (isNumber(num)) {
+          if (num > number) {
+              alert("Загаданное число меньше");
+              round();
+          } else if (num < number) {
+              alert("Загаданное число больше");
+              round();
+          } else {
+              if (confirm("Поздравляю, Вы угадали!!! Хотели бы сыграть еще?")) {
+                main();
+              } else {
+                alert("До свидания!");
+                return;
+              }
+          }
+      } else {
+          alert("Введи число!");
+          round();
+      }
+  }
+  round();
+}
+
+main();
